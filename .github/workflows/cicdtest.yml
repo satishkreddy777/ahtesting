@@ -9,6 +9,8 @@ jobs:
   terraformplan:
     name: Terraform initing
     runs-on: ubuntu-latest
+    environment: 
+     name: DEV
     defaults:
      run:
       shell: bash
