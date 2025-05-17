@@ -3,7 +3,7 @@ resource "azurerm_subnet" "terrsubnet" {
   name                 =  var.subnetname
   resource_group_name  = var.rgsubname
   virtual_network_name = var.vnetname
-  address_prefix       = var.subaddress_prefix
+  address_prefixes       = var.subaddress_prefix
 
   delegation {
     name = "acctestdelegation"
