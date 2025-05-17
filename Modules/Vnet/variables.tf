@@ -1,4 +1,4 @@
 variable "vnetname" {}
 variable "vnetlocation" {}
-variable "rgsname" {}
+variable "resource_group_name" {}
  variable "addspace" {}
