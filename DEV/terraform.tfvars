@@ -18,7 +18,7 @@ vnetts = {
  vnett1 = {
   vnetname = "devvnet"
   vnetlocation = "East US"
-  rgsname = "rg1"
+
   addspace = [ "10.0.0.0/16" ]
 
  }
