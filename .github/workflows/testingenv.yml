@@ -1,0 +1,57 @@
+name: "testing workflow file to deploy only in Test environment"
+on:
+    workflow_dispatch
+jobs:
+    plan:
+        name: Planning phase
+        runs-on: ubuntu-latest
+        defaults:
+            run: 
+             shell: bash
+             working-directory: ./TEST
+        steps:
+            - name: Git Checkout
+              uses: actions/checkout@v3
+            - name: Terraform Setup
+              uses: hashicorp/setup-terraform@v2
+            - name: Azure Login
+              uses: azure/login@v1
+              with:
+               client-id: ${{ secrets.AZURE_CLIENT_ID }}
+               tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+               subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }} 
+            - name: Terraform INIT
+              id: init
+              run: terraform init
+            - name: terraform validate
+              id: validate
+              run: terraform validate
+            - name: terraform plan
+              id: plan
+              run: terraform plan
+    apply:
+        name: apply job
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                shell: bash
+                working-directory: ./TEST
+        steps:
+            - name: Git Checkout
+              uses: actions/checkout@v3
+            - name: Terraform Setup
+              uses: hashicorp/setup-terraform@v2
+            - name: Azure Login
+              uses: azure/login@v1
+              with:
+               client-id: ${{ secrets.AZURE_CLIENT_ID }}
+               tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+               subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }} 
+            - name: Terraform INIT
+              id: init
+              run: terraform init
+            - name: terraform apply
+              id: apply
+              run: terraform apply          
+
+        
