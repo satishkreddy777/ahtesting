@@ -1,11 +1,11 @@
 
 rgs = {
   rg1 = {
-   rgname = "mythirdfg"
+   rgname = "devahrg"
    location = "East US"
   }
   rg2 = {
-   rgname = "mysecondfg"
+   rgname = "testah"
    location = "East US"
   }
  
