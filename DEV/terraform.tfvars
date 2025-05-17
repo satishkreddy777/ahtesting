@@ -14,7 +14,7 @@ rgs = {
 
 #VNETS
 
-/*vnetts = {
+vnetts = {
  vnett1 = {
   vnetname = "devvnet"
   vnetlocation = "East US"
@@ -22,4 +22,4 @@ rgs = {
   addspace = [ "10.0.0.0/16" ]
 
  }
-}*/
+}
