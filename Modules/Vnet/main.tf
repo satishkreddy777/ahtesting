@@ -1,6 +1,6 @@
 
 
-resource "azurerm_virtual_network" "example" {
+resource "azurerm_virtual_network" "terrvnet" {
   name                = var.vnetname
   location            = var.vnetlocation
   resource_group_name = var.rgname
