@@ -13,3 +13,4 @@ resource "azurerm_subnet" "terrsubnet" {
       actions = ["Microsoft.Network/virtualNetworks/subnets/join/action", "Microsoft.Network/virtualNetworks/subnets/prepareNetworkPolicies/action"]
     }
   }
+}
