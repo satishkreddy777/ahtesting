@@ -23,7 +23,7 @@ module "subnetmode" {
  for_each = var.snets
    subnetname = each.value.subnetname
    rgsubname = module.rgmodule["rg1"].rgoutput
-   vnetname =  module.vnetmode[each.value.vnetname].subnetout
+   vnetname =  module.vnetmode[each.value.vnetname]
    subaddress_prefix = each.value.subaddress_prefix
 }
 
