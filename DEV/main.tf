@@ -13,7 +13,7 @@ module "vnetmode" {
  for_each = var.vnetts
  vnetname = each.value.vnetname
  vnetlocation = each.value.vnetlocation
- rgsname = module.rgmodule[rg1].rgoutput
+ rgsname = module.rgmodule[each.value.rgsname].rgoutput
  addspace = each.value.addspace
  
 }
