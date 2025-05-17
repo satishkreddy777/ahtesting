@@ -12,7 +12,7 @@ module "rgmodule" {
   location = each.value.location
 }
 
-module "vnetmode" {
+/*module "vnetmode" {
  source = "../Modules/Vnet"
  for_each = var.vnetts
  vnetname = each.value.vnetname
@@ -20,4 +20,4 @@ module "vnetmode" {
  rgname = module.rgmodule["rg1"].rgoutput
  addspace = each.value.addspace
  
-}
+}*/
