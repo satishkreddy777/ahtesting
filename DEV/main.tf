@@ -17,3 +17,10 @@ module "vnetmode" {
  addspace = each.value.addspace
  
 }
+
+module "subnetmode" {
+ source = "../Modules/Subnet"
+ for_each = var.snets
+   
+}
+
