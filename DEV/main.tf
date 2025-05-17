@@ -1,8 +1,4 @@
 
-resource "azurerm_resource_group" "firstrg" {
-  name     = "testingfirstrg"
-  location = "East US"
-}
 
 module "rgmodule" {
   source = "../Modules/Resources"
@@ -17,7 +13,7 @@ module "vnetmode" {
  for_each = var.vnetts
  vnetname = each.value.vnetname
  vnetlocation = each.value.vnetlocation
- rgname = module.rgmodule["rg1"].rgoutput
+ rgsname = module.rgmodule["rg1"].rgoutput
  addspace = each.value.addspace
  
 }
