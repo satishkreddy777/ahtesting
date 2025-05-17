@@ -33,6 +33,7 @@ jobs:
     apply:
         name: apply job
         runs-on: ubuntu-latest
+        environment: TEST
         defaults:
             run:
                 shell: bash
