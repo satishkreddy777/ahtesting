@@ -11,3 +11,8 @@ module "rgmodule" {
   rgname = each.value.rgname
   location = each.value.location
 }
+
+module "vnetmode" {
+ source = "../Modules/Vnet"
+ 
+}
