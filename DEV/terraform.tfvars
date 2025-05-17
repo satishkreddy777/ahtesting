@@ -23,3 +23,10 @@ vnetts = {
 
  }
 }
+
+snets = {
+ snet1 = {
+  subnetname = "subnet1"
+  subaddress_prefix = "10.0.1.0/24"
+ }
+}
