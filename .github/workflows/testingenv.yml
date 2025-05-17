@@ -5,6 +5,7 @@ jobs:
     plan:
         name: Planning phase
         runs-on: ubuntu-latest
+        environment: TEST
         defaults:
             run: 
              shell: bash
