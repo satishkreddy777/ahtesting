@@ -1,3 +1,3 @@
 output "vnetop" {
- value = 
+ value = azurerm_virtual_network.terrvnet.id
 }
