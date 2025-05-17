@@ -6,6 +6,9 @@ jobs:
         name: Planning phase
         runs-on: ubuntu-latest
         environment: TEST
+        permissions:
+         id-token: write
+         contents: read
         defaults:
             run: 
              shell: bash
@@ -34,6 +37,9 @@ jobs:
         name: apply job
         needs: plan
         runs-on: ubuntu-latest
+        permissions:
+         id-token: write
+         contents: read
         environment: TEST
         defaults:
             run:
