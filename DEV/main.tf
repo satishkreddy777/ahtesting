@@ -8,6 +8,6 @@ module "rgmodule" {
   source = "../Modules/Resources"
 
   for_each = var.rgs
-  rgname = var.rgname
-  location = var.location
+  rgname = each.value.rgname
+  location = each.value.location
 }
